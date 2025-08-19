@@ -159,7 +159,7 @@ export default function AlphaOnWhiteTool() {
             {/* Dark mode panel */}
             <div className="p-4"  style={{ backgroundColor: '#18191B' }}>
                 <div className="pb-3 text-white text-base">Dark mode</div>
-                  <div className="relative w-full rounded-2xl overflow-hidden border border-gray-400" style={{ height: 180 }}>
+                  <div className="relative w-full rounded-2xl overflow-hidden borderborder-gray-400" style={{ height: 180 }}>
                     <div className="absolute inset-0" style={{ backgroundColor: targetCss }} />
                   </div>
             </div>
