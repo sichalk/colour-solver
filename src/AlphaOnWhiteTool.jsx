@@ -147,58 +147,57 @@ export default function AlphaOnWhiteTool() {
         {/* Previews */}
         <div className="grid md:grid-cols-2 gap-4">
           {/* Column 1: original on white, original on dark */}
-          <div className="bg-white p-4 rounded-2xl shadow-sm">
-            <div className="text-lg font-semibold text-gray-700 mb-1">Original colour (solid)</div>
-            <div className="text-xs text-gray-600 mb-2">Light mode</div>
-            {/* Light mode box */}
-            <div className="relative w-full rounded-2xl overflow-hidden" style={{ height: 180 }}>
-              <div className="absolute inset-0" style={{ backgroundColor: targetCss }} />
-            </div>
-
-            {/* Dark mode panel */}
-            <div className="mt-4 rounded-2xl overflow-hidden" style={{ backgroundColor: '#18191B' }}>
-              <div className="px-4 py-3 text-white text-base">Dark mode</div>
-              <div className="px-4 pb-4">
-                <div className="relative w-full rounded-2xl overflow-hidden" style={{ height: 180 }}>
-                  <div className="absolute inset-0" style={{ backgroundColor: targetCss }} />
-                </div>
+          <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+            <div className="p-4">
+              <div className="text-lg font-semibold text-gray-700 mb-1">Original colour (solid)</div>
+              <div className="text-base text-gray-600 mb-2">Light mode</div>
+              {/* Light mode box */}
+              <div className="relative w-full rounded-2xl overflow-hidden  border border-gray-300" style={{ height: 180 }}>
+                <div className="absolute inset-0" style={{ backgroundColor: targetCss }} />
               </div>
+            </div>
+            {/* Dark mode panel */}
+            <div className="p-4"  style={{ backgroundColor: '#18191B' }}>
+                <div className="pb-3 text-white text-base">Dark mode</div>
+                  <div className="relative w-full rounded-2xl overflow-hidden border border-gray-400" style={{ height: 180 }}>
+                    <div className="absolute inset-0" style={{ backgroundColor: targetCss }} />
+                  </div>
             </div>
           </div>
 
           {/* Column 2: computed on white (split), computed on dark (split) */}
-          <div className="bg-white p-4 rounded-2xl shadow-sm">
-            <div className="text-lg font-semibold text-gray-700 mb-1">Computed colour</div>
-            <div className="text-xs text-gray-600 mb-2">Light mode</div>
-            {/* Light mode box with right-half checkerboard */}
-            <div className="relative w-full rounded-2xl overflow-hidden" style={{ height: 180 }}>
-              {/* base white */}
-              <div className="absolute inset-0 bg-white" />
-              {/* right-half checkerboard */}
-              <div className="absolute inset-0" style={{ clipPath: 'inset(0 0 0 50%)' }}>
-                <CheckerBG className="w-full h-full" />
+          <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+            <div className="p-4">
+              <div className="text-lg font-semibold text-gray-700 mb-1">Computed colour</div>
+              <div className="text-base text-gray-600 mb-2">Light mode</div>
+              {/* Light mode box with right-half checkerboard */}
+              <div className="relative w-full rounded-2xl overflow-hidden border border-gray-300" style={{ height: 180 }}>
+                {/* base white */}
+                <div className="absolute inset-0 bg-white" />
+                {/* right-half checkerboard */}
+                <div className="absolute inset-0" style={{ clipPath: 'inset(0 0 0 50%)' }}>
+                  <CheckerBG className="w-full h-full" />
+                </div>
+                {/* rgba overlay */}
+                <div className="absolute inset-0" style={{ backgroundColor: rgbaCss }} />
               </div>
-              {/* rgba overlay */}
-              <div className="absolute inset-0" style={{ backgroundColor: rgbaCss }} />
             </div>
 
             {/* Dark mode panel */}
-            <div className="mt-4 rounded-2xl overflow-hidden" style={{ backgroundColor: '#18191B' }}>
-              <div className="px-4 py-3 text-white text-base">Dark mode</div>
-              <div className="px-4 pb-4">
-                <div className="relative w-full rounded-2xl overflow-hidden" style={{ height: 180 }}>
-                  {/* base dark */}
-                  <div className="absolute inset-0" style={{ backgroundColor: '#18191B' }} />
-                  {/* right-half checkerboard */}
-                  <div className="absolute inset-0" style={{ clipPath: 'inset(0 0 0 50%)' }}>
-                    <CheckerBG className="w-full h-full" />
+            <div className="p-4 "  style={{ backgroundColor: '#18191B' }}  >
+                <div className="pb-3 text-white text-base">Dark mode</div>
+                  <div className="relative w-full rounded-2xl overflow-hidden border border-gray-400" style={{ height: 180 }}>
+                    {/* base dark */}
+                    <div className="absolute inset-0" style={{ backgroundColor: '#18191B' }} />
+                    {/* right-half checkerboard */}
+                    <div className="absolute inset-0" style={{ clipPath: 'inset(0 0 0 50%)' }}>
+                      <CheckerBG className="w-full h-full" />
+                    </div>
+                    {/* rgba overlay */}
+                    <div className="absolute inset-0" style={{ backgroundColor: rgbaCss }} />
                   </div>
-                  {/* rgba overlay */}
-                  <div className="absolute inset-0" style={{ backgroundColor: rgbaCss }} />
-                </div>
               </div>
             </div>
-          </div>
         </div>
 
         {/* Notes */}
